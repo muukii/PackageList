@@ -17,7 +17,7 @@ jobs:
           xcode-version: "13.0"
       - uses: actions/checkout@v2
       - name: "Add Package to JSON"
-        run: jq ". |= . + [\"${{ github.event.inputs.name }}\"]\" packages.json > packages.json"
+        run: jq '. |= . + ["${{ github.event.inputs.url }}"]' packages.json > packages.json'
       - name: Validate
         run: swift ./validate.swift
         
