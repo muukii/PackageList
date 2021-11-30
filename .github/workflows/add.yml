@@ -13,8 +13,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: maxim-lobanov/setup-xcode@v1.1
-          with:
-            xcode-version: "13.0"
+        with:
+          xcode-version: "13.0"
       - uses: actions/checkout@v2
       - name: "Add Package to JSON"
         run: echo "Hello ${{ github.event.inputs.name }}"
